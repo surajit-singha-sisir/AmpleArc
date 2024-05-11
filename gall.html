@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERIES</title>
+</head>
+
+<body>
+
+    <style>
+        /* PROJECT GALLERY START */
+        .projectGallery {
+            position: relative;
+            width: 100vw;
+            min-height: 70vh;
+            max-height: 80vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        .projectGallery .ohp-InnerBlock {
+            position: relative;
+            width: 100%;
+            min-height: 60vh;
+            max-height: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .projectGallery .ohp-InnerBlock h2 {
+            color: white;
+            padding: 2rem;
+        }
+
+        .projectGallery .ohp-InnerBlock .background>div img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+        }
+        /* PROJECT GALLERY END */
+
+
+        .background {
+            position: absolute;
+            width: 100%;
+            min-height: inherit;
+            max-height: inherit;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3 ease;
+        }
+
+        .ohp-backgroundLight {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            min-height: inherit;
+            max-height: inherit;
+            object-fit: cover;
+            aspect-ratio: 80/37;
+        }
+
+
+        .background>div {
+            position: absolute;
+            aspect-ratio: 1;
+            border-radius: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .relativeWidth20 {
+            width: 20vw;
+            height: auto;
+            aspect-ratio: 1;
+            transition: all 0.3s ease;
+        }
+
+        .relativeWidth15 {
+            width: 15vw;
+            height: auto;
+            aspect-ratio: 1;
+            transition: all 0.3s ease;
+        }
+
+        .relativeWidth10 {
+            width: 10vw;
+            height: auto;
+            aspect-ratio: 1;
+            transition: all 0.3s ease;
+        }
+
+        /* IMAGE SHADOW */
+        .background .galls img {
+            box-shadow: 5px 12px 10px #00000070;
+        }
+
+        .background>div img {
+            width: 100%;
+            height: auto;
+            border-radius: clamp(0.2rem, 1rem, 1.5rem);
+            aspect-ratio: 1;
+        }
+
+        @media screen and (max-width: 1080px) {
+
+            .relativeWidth20 {
+                width: 25vw;
+                height: auto;
+            }
+
+            .relativeWidth15 {
+                width: 20vw;
+                height: auto;
+            }
+
+            .relativeWidth10 {
+                width: 15vw;
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+
+            .relativeWidth20 {
+                width: 35vw;
+                height: auto;
+            }
+
+            .relativeWidth15 {
+                width: 30vw;
+                height: auto;
+            }
+
+            .relativeWidth10 {
+                width: 25vw;
+                height: auto;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+
+            .relativeWidth20 {
+                width: 35vw;
+                height: auto;
+            }
+
+            .relativeWidth15 {
+                width: 30vw;
+                height: auto;
+            }
+
+            .relativeWidth10 {
+                width: 25vw;
+                height: auto;
+            }
+        }
+
+        .background .gal-1 {
+            left: 25%;
+            /* VARIABLE */
+            top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .background .gal-2 {
+            left: 35%;
+            /* VARIABLE */
+            top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 2
+        }
+
+        .background .gal-3 {
+            left: 50%;
+            /* VARIABLE */
+            top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+
+        .background .gal-4 {
+            left: 65%;
+            /* VARIABLE */
+            top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .background .gal-5 {
+            left: 75%;
+            /* VARIABLE */
+            top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .background .light {
+            position: absolute;
+            width: inherit;
+            height: 400px;
+        }
+
+        .background .light>img:first-child {
+            position: absolute;
+            width: auto;
+            top: 0;
+            height: 100% !important;
+            z-index: 2;
+        }
+        .responsiveWidth {
+            width: 90%;
+        }
+    </style>
+    <!-- PROJECT GALLERY START -->
+    <div class="projectGallery">
+        <div class="ohp-InnerBlock">
+            <h2>PROJECT GALLERY</h2>
+            <div class="background">
+                <img class="ohp-backgroundLight" alt="" src="gallery.png">
+
+                <div class="relativeWidth10 gal-1 galls"><img src="gal-1.png" alt=""></div>
+                <div class="relativeWidth15 gal-2 galls"><img src="gal-2.png" alt=""></div>
+                <div class="relativeWidth20 gal-3 galls"><img src="gal-3.png" alt=""></div>
+                <div class="relativeWidth15 gal-4 galls"><img src="gal-4.png" alt=""></div>
+                <div class="relativeWidth10 gal-5 galls"><img src="gal-5.png" alt=""></div>
+                <audio id="audioPlayer" src="gun.mp3"></audio>
+            </div>
+        </div>
+    </div>
+    <!-- PROJECT GALLERY END -->
+</body>
+<script>
+    print = console.log;
+    function gallery() {
+        const imgs = document.querySelectorAll('.background > div:not(:last-child)');
+        // print(imgs);
+
+        imgs.forEach(function (div) {
+            div.onclick = function () {
+                swapClasses(div);
+            }
+        });
+
+    }
+    gallery();
+
+    function swapClasses(clickedDiv) {
+        var centerDiv = document.querySelector('.gal-3');
+
+        // Swap classes
+        var tempClass = centerDiv.className;
+        centerDiv.className = clickedDiv.className;
+        clickedDiv.className = tempClass;
+        const audio = document.getElementById('audioPlayer');
+        audio.play();
+        clickedDiv.style.transition = 'all 0.5s cubic-bezier(0.38,-0.25, 0, 1.7)';
+    }
+
+
+
+    // ON 320PX OR LESS DEVICES
+    var media320px = window.matchMedia("(max-width:320px)");
+
+    // On Mobile Device
+    function viewSingle(media320px) {
+
+        const singleImg = document.querySelectorAll('.background .galls');
+
+
+        if (media320px.matches) {
+
+            function showImages(index) {
+                const currentIndex = index % singleImg.length;
+                const img = singleImg[currentIndex];
+
+                // HIDE ALL
+                singleImg.forEach(img => {
+                    img.style.opacity = '0';
+                    img.classList = [];
+                    img.classList.add('responsiveWidth');
+                });
+
+                    const centerClasses = ['relativeWidth20', 'gal-3'];
+                    img.classList.add(...centerClasses);
+                    img.style.opacity = '1';
+
+                    setTimeout(() => {
+                        // Remove centerClasses from current img
+                        img.classList.remove(...centerClasses);
+                        img.style.opacity = '0';
+
+                        // Call showImages with the next index
+                        showImages(currentIndex + 1);
+                    }, 3000);
+            }
+
+            // Start the infinite loop
+            showImages(0);
+
+
+        }
+
+        else {
+            // SHOW ALL singleImg
+            singleImg.forEach(function (img) {
+                img.style.opacity = '1';
+            });
+        }
+
+    }
+    viewSingle(media320px);
+    media320px.onchange = function () {
+        viewSingle(media320px);
+    }
+
+
+
+</script>
+
+</html>

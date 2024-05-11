@@ -1,0 +1,192 @@
+/* PROJECT GALLERY START */
+.projectGallery {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: greenyellow;
+    overflow: hidden;
+}
+
+.projectGallery .ohp-InnerBlock {
+    position: relative;
+    width: inherit;
+    height: 80vh;
+}
+.projectGallery .ohp-InnerBlock .background{
+    position: relative;
+    width: inherit;
+    height: inherit;
+}
+
+.projectGallery .ohp-InnerBlock .background .backgroundImage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: inherit;
+}
+
+.projectGallery .ohp-InnerBlock .backgroundImage img {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    object-position: center;
+}
+
+.projectGallery .ohp-InnerBlock .background>div img {}
+
+/* PROJECT GALLERY END */
+
+
+
+.ohp-backgroundLight {}
+
+
+.background>div {}
+
+.relativeWidth20 {
+    width: 20vw;
+    height: auto;
+    aspect-ratio: 1;
+    transition: all 0.3s ease;
+}
+
+.relativeWidth15 {
+    width: 15vw;
+    height: auto;
+    aspect-ratio: 1;
+    transition: all 0.3s ease;
+}
+
+.relativeWidth10 {
+    width: 10vw;
+    height: auto;
+    aspect-ratio: 1;
+    transition: all 0.3s ease;
+}
+
+/* IMAGE SHADOW */
+.background .galls img {
+    box-shadow: 5px 12px 10px #00000070;
+}
+
+.background>div img {
+    width: 100%;
+    height: auto;
+    border-radius: clamp(0.2rem, 1rem, 1.5rem);
+    aspect-ratio: 1;
+}
+
+
+.background .gal-1 {
+    left: 25%;
+    /* VARIABLE */
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.background .gal-2 {
+    left: 35%;
+    /* VARIABLE */
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2
+}
+
+.background .gal-3 {
+    left: 50%;
+    /* VARIABLE */
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.background .gal-4 {
+    left: 65%;
+    /* VARIABLE */
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.background .gal-5 {
+    left: 75%;
+    /* VARIABLE */
+    top: 60%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.background .light {
+    position: absolute;
+    width: inherit;
+    height: 400px;
+}
+
+.background .light>img:first-child {
+    position: absolute;
+    width: auto;
+    top: 0;
+    height: 100%;
+    z-index: 2;
+}
+
+
+
+
+@media screen and (max-width: 1080px) {
+
+    .relativeWidth20 {
+        width: 25vw;
+        height: auto;
+    }
+
+    .relativeWidth15 {
+        width: 20vw;
+        height: auto;
+    }
+
+    .relativeWidth10 {
+        width: 15vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    .relativeWidth20 {
+        width: 35vw;
+        height: auto;
+    }
+
+    .relativeWidth15 {
+        width: 30vw;
+        height: auto;
+    }
+
+    .relativeWidth10 {
+        width: 25vw;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .relativeWidth20 {
+        width: 35vw;
+        height: auto;
+    }
+
+    .relativeWidth15 {
+        width: 30vw;
+        height: auto;
+    }
+
+    .relativeWidth10 {
+        width: 25vw;
+        height: auto;
+    }
+}
