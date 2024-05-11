@@ -1,16 +1,24 @@
 body {
+    box-sizing: border-box;
     margin: 0 auto;
+    background-color: #162e37;
     padding: 0;
     width: 100%;
-    box-sizing: border-box;
-    background-color: #162e37;
 }
 
 // -------------- FUNDAMENTAL CLASSES START -------------------
+
+// LOGO
+.logo {
+    // width: 100%;
+    // height: auto;
+    color: #eeff00;
+    font-size: 1.5rem;
+}
 a {
-    text-decoration: none;
     color: white;
     font-size: 1rem;
+    text-decoration: none;
 }
 a:hover {
     color: #fca739;
@@ -29,12 +37,12 @@ a:hover {
 }
 
 .searchBar {
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
-    height: auto;
     width: 20rem;
+    height: auto;
     height: 4rem;
 }
 
@@ -49,21 +57,21 @@ h2 {
 }
 
 .tag {
+    display: block;
     position: relative;
     border: 1px solid #838383a8;
-    padding: 0.5rem;
-    display: block;
     border-radius: 0.4rem;
+    padding: 0.5rem;
 }
 .tag:hover {
     background-color: #00000052;
 }
 .tagsAlignRow {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    flex-wrap: wrap;
 }
 .credit {
     color: #ccc;
@@ -87,13 +95,13 @@ h2 {
 
 /* 2nd ROW */
 .bodyContainer {
-    width: 100%;
+    display: flex;
     position: sticky;
     top: 0;
-    display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
     z-index: 5;
+    width: 100%;
 
     // TOP ROW = BLOG PRESS RELEASE SEARCH BAR
 
@@ -104,23 +112,23 @@ h2 {
     /* NAVBAR START */
     .navMainContainer {
         position: relative;
-        border-bottom: 1px solid #cccccc4b;
         z-index: 5;
         box-shadow: 1px 4px 5px 1px #02000038;
+        border-bottom: 1px solid #cccccc4b;
 
         .navbar {
-            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px;
-            background-color: #1c3742;
-            color: #fff;
             z-index: 5;
+            background-color: #1c3742;
+            padding: 10px;
+            width: 100%;
+            color: #fff;
 
             & > * {
-                width: 80%;
                 margin: 0 auto;
+                width: 80%;
             }
 
             /* HAMBURGER STYLE START */
@@ -130,16 +138,16 @@ h2 {
                 cursor: pointer;
 
                 .bar {
+                    transition: transform 0.4s ease;
+                    margin: 4px 0;
+                    background-color: #edd5b9;
                     width: 30px;
                     height: 3px;
-                    background-color: #edd5b9;
-                    margin: 4px 0;
-                    transition: transform 0.4s ease;
                 }
 
                 .barA {
-                    width: 20px;
                     transition: transform 0.4s ease;
+                    width: 20px;
                 }
                 &.active .bar:nth-child(1) {
                     transform: translateY(12px) translateX(-5px) rotate(45deg);
@@ -153,35 +161,28 @@ h2 {
                     transform: translateY(-10px) translateX(-4px) rotate(-45deg);
                 }
             }
-
-            // LOGO
-            .logo {
-                // width: 100%;
-                // height: auto;
-                font-size: 1.5rem;
-            }
         }
     }
 }
 
 .navMenuContainer {
-    width: max-content;
-    margin-left: 1rem;
-    overflow: hidden;
     transition: all 0.3s ease;
+    margin-left: 1rem;
+    width: max-content;
+    overflow: hidden;
 }
 .nav-items {
+    text-wrap: nowrap;
     display: flex;
     width: 100%;
-    text-wrap: nowrap;
     overflow: scroll;
     scrollbar-width: none;
 }
 
 .nav-items a {
+    padding: 0 15px;
     color: #fff;
     text-decoration: none;
-    padding: 0 15px;
 }
 
 // ------------------ NAV MENU END -------------------
@@ -189,20 +190,20 @@ h2 {
 // ------------------- PARALLAX START ---------------------
 
 .parallax {
+    position: relative;
     width: auto;
     height: 600px;
     overflow: hidden;
-    position: relative;
 }
 
 .parallax-bg {
-    background-image: url("images/img.jpg");
-    /* Add your background image */
-    background-size: cover;
-    background-position: center;
     position: absolute;
     top: 0;
     left: 0;
+    background-image: url("images/img.jpg");
+    background-position: center;
+    /* Add your background image */
+    background-size: cover;
     width: 100%;
     height: 150%;
 }
@@ -212,9 +213,9 @@ h2 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
     z-index: 1;
+    color: #fff;
+    text-align: center;
 }
 
 .main-content {
@@ -226,11 +227,11 @@ h2 {
 /* PARALLAX START */
 .openHouseParallax {
     position: relative;
-    width: 100%;
-    height: 80vh;
     /* CONTAINER MAX HEIGHT */
     /* background-color: #1b3842; */
     transition: all 0.3s ease;
+    width: 100%;
+    height: 80vh;
     overflow: hidden;
 
     & :where(img) {
@@ -239,140 +240,140 @@ h2 {
 
     /* BUILDING BLOCKS PARENT DIV */
     & .ohp60 {
-        width: 70%;
         position: relative;
-        height: 100%;
         float: right;
         transition: all 0.3s ease;
+        width: 70%;
+        height: 100%;
     }
 
     & .ohp-bg {
         position: absolute;
         top: 0;
         left: 0;
+        opacity: 0.4;
+        z-index: 1;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        opacity: 0.4;
-        z-index: 1;
     }
 
     /* PROPS */
     & .ohp-props {
         position: absolute;
-        width: 30%;
-        right: 10%;
         top: 10%;
+        right: 10%;
         z-index: 1;
         animation: bounce 6s ease-in-out infinite;
+        width: 30%;
     }
 
     & .ohp-props2 {
         position: absolute;
-        width: 6%;
-        left: 10%;
         top: 55%;
+        left: 10%;
         z-index: 1;
         animation: bounce 5s ease-out infinite;
+        width: 6%;
     }
 
     & .ohp-cloud,
     .ohp-cloud3 {
-        width: 10%;
         position: absolute;
-        left: 0;
         top: 20%;
+        left: 0;
+        opacity: 0.3;
         z-index: 2;
         animation: b2t 30s linear infinite;
-        opacity: 0.3;
+        width: 10%;
     }
 
     & .ohp-cloud2 {
-        width: 5%;
         position: absolute;
-        left: 0;
         top: 55%;
+        left: 0;
         z-index: 2;
         animation: left2Right 30s linear infinite;
+        width: 5%;
     }
 
     & .ohp-cloud3 {
-        width: 5%;
         position: absolute;
-        left: 60%;
         top: 55%;
+        left: 60%;
         z-index: 2;
         animation: b22Build 30s linear infinite;
+        width: 5%;
     }
 
     & .ohp-cloud4 {
-        width: 12%;
         position: absolute;
-        left: 0;
         top: 25%;
+        left: 0;
         z-index: 2;
         animation: left2Right 35s linear infinite;
+        width: 12%;
     }
 
     /* BUILDINGS */
     & .ohp60 {
         & .ohp-building1 {
             position: absolute;
-            width: 20%;
-            bottom: 0;
             right: 5%;
+            bottom: 0;
             z-index: 3;
             animation: b2t 1.2s ease;
+            width: 20%;
         }
 
         & .ohp-building2 {
             position: absolute;
-            width: 12%;
-            bottom: 0;
             right: 22%;
+            bottom: 0;
             z-index: 2;
             animation: b2tBuild 3.5s ease;
+            width: 12%;
         }
 
         & .ohp-building3 {
             position: absolute;
-            width: 18%;
-            bottom: 0;
             right: 32%;
+            bottom: 0;
             z-index: 2;
             animation: b2t 1.8s ease;
+            width: 18%;
         }
 
         & .ohp-building4 {
             position: absolute;
-            width: 14%;
-            bottom: 0;
             right: 50%;
+            bottom: 0;
             z-index: 2;
             animation: b2tBuild 2.5s ease;
+            width: 14%;
         }
 
         & .ohp-building5 {
             position: absolute;
-            width: 12%;
-            bottom: 0;
             right: 62%;
+            bottom: 0;
             z-index: 2;
             animation: b2t 2.5s ease;
+            width: 12%;
         }
     }
 
     & .ohp-inBetweenContent {
         position: absolute;
-        left: 5%;
         top: 40%;
+        left: 5%;
         z-index: 2;
 
         & :is(h1) {
-            font-size: 4rem;
             font-weight: 800;
-            text-transform: uppercase;
+            font-size: 4rem;
             letter-spacing: 1rem;
+            text-transform: uppercase;
         }
 
         & h1:first-child {
@@ -389,67 +390,67 @@ h2 {
 
     & .ohp-bottomTop {
         position: absolute;
-        width: 100%;
         bottom: -5px;
         left: 0;
         z-index: 3;
+        width: 100%;
     }
 }
 
 /* MEDIA SCREEN START */
 @media screen and (max-width: 1368px) {
     .openHouseParallax {
-        height: 550px;
         transition: all 0.3s ease;
+        height: 550px;
 
         /* BUILDING BLOCKS PARENT DIV */
         & .ohp60 {
-            width: 80%;
             transition: all 0.3s ease;
+            width: 80%;
 
             & .ohp-building1 {
                 position: absolute;
-                width: 15%;
-                bottom: 0;
                 right: 5%;
+                bottom: 0;
                 z-index: 3;
                 animation: b2t 1.2s ease;
+                width: 15%;
             }
 
             & .ohp-building2 {
                 position: absolute;
-                width: 10%;
-                bottom: 0;
                 right: 22%;
+                bottom: 0;
                 z-index: 2;
                 animation: b2tBuild 3.5s ease;
+                width: 10%;
             }
 
             & .ohp-building3 {
                 position: absolute;
-                width: 15%;
-                bottom: 0;
                 right: 32%;
+                bottom: 0;
                 z-index: 2;
                 animation: b2t 1.8s ease;
+                width: 15%;
             }
 
             & .ohp-building4 {
                 position: absolute;
-                width: 12%;
-                bottom: 0;
                 right: 50%;
+                bottom: 0;
                 z-index: 2;
                 animation: b2tBuild 2.5s ease;
+                width: 12%;
             }
 
             & .ohp-building5 {
                 position: absolute;
-                width: 12%;
-                bottom: 0;
                 right: 62%;
+                bottom: 0;
                 z-index: 2;
                 animation: b2t 2.5s ease;
+                width: 12%;
             }
         }
 
@@ -464,8 +465,8 @@ h2 {
 }
 @media screen and (max-width: 1080px) {
     .openHouseParallax {
-        height: 600px;
         transition: all 0.3s ease;
+        height: 600px;
 
         & .ohp-inBetweenContent {
             top: 20% !important;
@@ -479,13 +480,13 @@ h2 {
 
 @media screen and (max-width: 720px) {
     .openHouseParallax {
-        height: 400px !important;
         transition: all 0.3s ease;
+        height: 400px !important;
 
         /* BUILDING BLOCKS PARENT DIV */
         & .ohp60 {
-            width: 100%;
             transition: all 0.3s ease;
+            width: 100%;
         }
         & .ohp-inBetweenContent {
             top: 20% !important;
@@ -589,23 +590,23 @@ h2 {
 
     .nav-items {
         display: none;
-        flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 100%;
-        height: max-content;
+        flex-direction: column;
+        animation: topDown 0.5s linear;
         background-color: #162e37;
         padding: 10px 0;
-        animation: topDown 0.5s linear;
+        width: 100%;
+        height: max-content;
     }
 
     .nav-items a {
+        border-bottom: 1px solid #555;
         padding: 10px 0;
+        color: white;
         font-size: larger;
         text-align: center;
-        border-bottom: 1px solid #555;
-        color: white;
     }
 
     .nav-items a:hover {
@@ -685,10 +686,10 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    z-index: 5;
+    padding: 2rem 0;
     width: 100%; // CHANGE FILL WIDTH
     height: auto;
-    padding: 2rem 0;
-    z-index: 5;
 
     & .leftSide {
         display: flex;
@@ -707,9 +708,9 @@ h2 {
                 gap: 0.2rem;
 
                 & > .dot {
+                    background-color: #ff9f00;
                     width: 0.3rem;
                     height: 0.3rem;
-                    background-color: #ff9f00;
                 }
             }
         }
@@ -720,29 +721,29 @@ h2 {
 
     & .rightSide {
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+        border-radius: 1rem;
+        background-color: #b26418;
+        padding: 0.5rem 0;
         width: 8rem;
         height: inherit;
-        background-color: #b26418;
         color: white;
-        border-radius: 1rem;
-        padding: 0.5rem 0;
-        transition: all 0.3s ease;
 
         & img {
-            width: 1.5rem;
-            margin-left: 0;
             transition: all 0.3s ease;
+            margin-left: 0;
+            width: 1.5rem;
         }
     }
     & .rightSide:hover {
-        background-color: #925505;
         transition: all 0.3s ease;
+        background-color: #925505;
 
         & img {
-            margin-left: -0.5rem;
             transition: all 0.3s ease;
+            margin-left: -0.5rem;
         }
     }
 }
@@ -756,79 +757,79 @@ h2 {
     width: 100%;
     min-height: 70vh;
     max-height: 80vh;
-    color: white;
     overflow: hidden;
+    color: white;
 
     & .ohp-InnerBlock {
         position: relative;
+        background-image: url(images/gallery.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         width: inherit;
         min-height: 80vh;
         max-height: 100%;
-        background-image: url(images/gallery.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         & h2 {
-            color: white;
             padding: 2rem;
+            color: white;
         }
 
         & .background {
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3 ease;
             width: 100%;
             min-height: inherit;
             max-height: inherit;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            transition: all 0.3 ease;
 
             & > div img {
+                aspect-ratio: 1;
                 width: 100%;
                 height: auto;
-                aspect-ratio: 1;
             }
 
             & .ohp-backgroundLight {
                 position: absolute;
                 top: 0;
+                aspect-ratio: 80/37;
                 width: 100%;
                 min-height: inherit;
                 max-height: inherit;
                 object-fit: cover;
-                aspect-ratio: 80/37;
             }
 
             & > div {
                 position: absolute;
-                aspect-ratio: 1;
-                border-radius: 20px;
-                left: 50%;
                 top: 50%;
+                left: 50%;
                 transform: translate(-50%, -50%);
+                border-radius: 20px;
+                aspect-ratio: 1;
             }
 
             // CENTER ITEM
             & .relativeWidth20 {
+                transition: all 0.3s ease;
+                aspect-ratio: 1;
                 width: 20vw;
                 height: auto;
-                aspect-ratio: 1;
-                transition: all 0.3s ease;
             }
 
             & .relativeWidth15 {
+                transition: all 0.3s ease;
+                aspect-ratio: 1;
                 width: 15vw;
                 height: auto;
-                aspect-ratio: 1;
-                transition: all 0.3s ease;
             }
 
             .relativeWidth10 {
+                transition: all 0.3s ease;
+                aspect-ratio: 1;
                 width: 10vw;
                 height: auto;
-                aspect-ratio: 1;
-                transition: all 0.3s ease;
             }
 
             /* IMAGE SHADOW */
@@ -837,48 +838,48 @@ h2 {
             }
 
             & > div img {
-                width: 100%;
-                height: auto;
                 border-radius: clamp(0.2rem, 1rem, 1.5rem);
                 aspect-ratio: 1;
+                width: 100%;
+                height: auto;
             }
 
             & .gal-1 {
-                left: 25%;
                 /* VARIABLE */
                 top: 60%;
+                left: 25%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
             }
 
             & .gal-2 {
-                left: 35%;
                 /* VARIABLE */
                 top: 60%;
+                left: 35%;
                 transform: translate(-50%, -50%);
                 z-index: 2;
             }
 
             & .gal-3 {
-                left: 50%;
                 /* VARIABLE */
                 top: 60%;
+                left: 50%;
                 transform: translate(-50%, -50%);
                 z-index: 3;
             }
 
             & .gal-4 {
-                left: 65%;
                 /* VARIABLE */
                 top: 60%;
+                left: 65%;
                 transform: translate(-50%, -50%);
                 z-index: 2;
             }
 
             & .gal-5 {
-                left: 75%;
                 /* VARIABLE */
                 top: 60%;
+                left: 75%;
                 transform: translate(-50%, -50%);
                 z-index: 1;
             }
@@ -943,76 +944,81 @@ h2 {
 ----------------------------------------*/
 
 .teamContainer {
-    display: grid;
-    grid-template-columns: 30% 20% auto;
-    grid-template-rows: auto;
     grid-gap: 1rem;
-    width: 100%;
-    height: 100%;
-}
-
-.teamContainer .center {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.teamContainer .right {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    width: 100%;
-    height: auto;
-}
-
-/* LEFT CONTENTS */
-.ourTeamText {
-    position: relative;
-    display: block;
+    grid-template-rows: auto;
+    grid-template-columns: 30% 20% auto;
     width: 100%;
     height: 100%;
-}
 
-.ourTeamText .team-bg {
-    position: absolute;
-    height: inherit;
-}
+    & .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    & .right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        width: 100%;
+        height: auto;
+    }
 
-.team-bg img {
-    width: 100%;
-    height: auto;
-}
+    /* LEFT CONTENTS */
+    .ourTeamText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
 
-.team-bg p {
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: "Bayon";
-    color: white;
-    font-size: x-large;
-    line-height: 0;
-}
+        & .team-bg {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: inherit;
+            height: inherit;
 
-.team-bg p::after {
-    content: "";
-    position: absolute;
-    width: 2.5rem;
-    height: 4px;
-    bottom: -1.4rem;
-    right: 0;
-    background-color: #d0e200;
-}
+            & img {
+                width: 100%;
+                height: auto;
+            }
+            & p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: white;
+                font-size: x-large;
+                line-height: 0;
+                font-family: "Bayon";
 
-.teamContainer .leftRes {
-    display: none;
+                &::after {
+                    position: absolute;
+                    right: 0;
+                    bottom: -1.4rem;
+                    background-color: #d0e200;
+                    width: 2.5rem;
+                    height: 4px;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    .leftRes {
+        display: none;
+    }
 }
 
 /* TEAM MEMBER DETAILS */
 
 .teamMember {
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
     height: max-content;
@@ -1020,40 +1026,40 @@ h2 {
 
 .teamMember .member-pattern {
     position: relative;
+    background-color: #0a597a;
     width: inherit;
     height: 70%;
-    background-color: #0a597a;
 }
 
 .teamMember .member-pattern .member-sm-cicle {
     position: absolute;
-    aspect-ratio: 1/1;
-    width: 1rem;
-    height: 1rem;
-    background-image: linear-gradient(to right, #0a597a, #b8b8b8);
-    border-radius: 50%;
     top: 5%;
     left: 8%;
     z-index: 1;
+    border-radius: 50%;
+    background-image: linear-gradient(to right, #0a597a, #b8b8b8);
+    aspect-ratio: 1/1;
+    width: 1rem;
+    height: 1rem;
 }
 
 .teamMember .member-pattern .member-bg-cicle {
     position: absolute;
+    right: 3%;
+    bottom: 5%;
+    z-index: 1;
+    border-radius: 50%;
+    background-image: linear-gradient(to left, #0a597a, #b8b8b8);
     width: 1.6rem;
     height: 1.6rem;
-    background-image: linear-gradient(to left, #0a597a, #b8b8b8);
-    border-radius: 50%;
-    bottom: 5%;
-    right: 3%;
-    z-index: 1;
 }
 
 .teamMember .member-pattern .line-pattern {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
     width: 40%;
     height: 100%;
-    position: absolute;
-    display: flex;
-    align-items: flex-end;
 }
 
 .teamMember .member-pattern .line-pattern img {
@@ -1061,59 +1067,59 @@ h2 {
 }
 
 .teamMember .member-pattern .member-img {
-    position: relative;
     display: flex;
-    width: 100%;
-    height: 100%;
+    position: relative;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
 .teamMember .member-pattern .member-img div:first-of-type {
-    padding: 1rem;
-    width: 50%;
-    height: auto;
     display: block;
+    padding: 1rem;
+    width: -webkit-fill-available;
+    height: auto;
 }
 
 .teamMember .member-pattern .member-img img {
+    border-radius: 50%;
     width: 100%;
     height: inherit;
-    border-radius: 50%;
 }
 
 .teamMember .teamMemberName {
-    position: relative;
-    width: inherit;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: flex-end;
+    background-color: #146688;
+    width: inherit;
     height: 30%;
     overflow: hidden;
-    background-color: #146688;
 }
 
 .teamMember .teamMemberName .teamNameContainer {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
     color: white;
-    padding: 0.5rem;
     text-align: center;
 }
 
 .teamMember .teamMemberName .teamNameContainer > p {
-    text-transform: capitalize;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .teamMember .teamMemberName .teamNameContainer p:first-of-type {
-    font-size: 1.2rem;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .teamMember .teamMemberName .teamNameContainer p:nth-of-type(n + 2) {
@@ -1122,8 +1128,8 @@ h2 {
 
 @media screen and (max-width: 1368px) {
     .teamMember .teamMemberName .teamNameContainer > p {
-        text-align: center;
         margin: 0.2rem;
+        text-align: center;
     }
 }
 
@@ -1142,9 +1148,9 @@ h2 {
 
     .teamContainer .leftRes {
         display: block;
+        position: relative;
         width: 100%;
         height: max-content;
-        position: relative;
     }
 
     .teamContainer .leftRes p {
@@ -1156,29 +1162,29 @@ h2 {
     }
 
     .teamContainer .leftRes p::before {
-        content: "";
         position: absolute;
-        width: 9.1rem;
-        height: 3px;
         bottom: -0.5rem;
         left: 0;
         border-radius: 1rem;
         background-color: #f1df34;
+        width: 9.1rem;
+        height: 3px;
+        content: "";
     }
 
     .teamContainer .center {
-        height: 100%;
         display: flex;
         align-items: center;
+        height: 100%;
     }
 
     .teamContainer .teamCEO {
-        position: relative;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
-        width: 90%;
         margin: 0 auto;
+        width: 90%;
     }
 
     .teamContainer .right {
@@ -1190,13 +1196,13 @@ h2 {
     }
 
     .teamMember .teamMemberName .teamNameContainer > p {
-        text-align: center;
         margin: 0.2rem;
+        text-align: center;
     }
 
     .teamMember .teamMemberName .teamNameContainer p:first-of-type {
-        font-size: 1.2rem;
         font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .teamMember .teamMemberName .teamNameContainer p:nth-of-type(n + 2) {
@@ -1214,8 +1220,8 @@ h2 {
     }
 
     .teamMember .teamMemberName .teamNameContainer p:first-of-type {
-        font-size: 1.2rem;
         font-weight: bold;
+        font-size: 1.2rem;
     }
 
     .teamMember .teamMemberName .teamNameContainer p:nth-of-type(n + 2) {
@@ -1232,14 +1238,14 @@ h2 {
 ----------------------------------------*/
 .testimonial_body {
     position: relative;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    box-shadow: 1px 1px 2px -1px #fff;
+    border-radius: 2rem;
+    background-color: #1b3842;
     width: 60%;
     height: 400px;
-    background-color: #1b3842;
-    border-radius: 2rem;
-    box-shadow: 1px 1px 2px -1px #fff;
-    margin: 0 auto;
     color: white;
-    transition: all 0.3s ease;
 
     &:hover {
         transition: all 0.3s ease;
@@ -1248,50 +1254,50 @@ h2 {
     }
 
     .circle_profile {
-        aspect-ratio: 1;
-        padding-top: 1rem;
-        border-radius: 50%;
-        height: 100px;
-        width: 100px;
         margin: auto;
+        border-radius: 50%;
+        padding-top: 1rem;
+        aspect-ratio: 1;
+        width: 100px;
+        height: 100px;
     }
 
     .circle_profile img {
+        border: 2px solid green;
         border-radius: 50%;
-        width: 100%;
         aspect-ratio: 1;
+        width: 100%;
+        height: auto;
         object-fit: cover;
         object-position: center;
-        height: auto;
-        border: 2px solid green;
     }
 
     .designation {
-        width: inherit;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         padding-top: 0.5rem;
+        width: inherit;
 
         & .ceoName {
-            font-size: 1.2rem;
-            font-weight: 600;
             margin: 0;
             padding-top: 0.5rem;
+            font-weight: 600;
+            font-size: 1.2rem;
         }
         & .ceoDes {
-            font-size: 1rem;
-            font-weight: 400;
             margin: 0;
+            font-weight: 400;
+            font-size: 1rem;
         }
     }
 
     .quote {
         position: relative;
-        height: 40px;
         gap: 80%;
         width: 100%;
+        height: 40px;
     }
 
     .quote1 {
@@ -1300,9 +1306,9 @@ h2 {
 
     .quote2 {
         display: flex;
-        padding-right: 1rem;
         justify-content: flex-end;
         float: right;
+        padding-right: 1rem;
     }
 
     .quote img {
@@ -1311,33 +1317,33 @@ h2 {
     }
 
     .testimonial_text {
-        position: relative;
-        width: 80%;
         display: flex;
+        position: relative;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
+        width: 80%;
         font-size: 1.2rem;
         text-align: justify;
     }
 
     .progressBar {
-        height: 5px;
         margin: 50px auto;
-        overflow: hidden;
-        width: 30%;
-        background-color: green;
         border-radius: 5px;
+        background-color: green;
+        width: 30%;
+        height: 5px;
+        overflow: hidden;
     }
 
     .progressBar #progressRunner {
-        height: inherit;
-        width: 100%;
         display: flex;
-        background-color: aqua;
         animation: left2right 10s linear;
         margin: 0 auto;
         border-radius: 5px;
+        background-color: aqua;
+        width: 100%;
+        height: inherit;
     }
 }
 @keyframes left2right {
@@ -1360,20 +1366,20 @@ h2 {
     .newsMainBody {
         display: flex;
         flex-direction: row;
-        justify-content: center;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
 
         .architechNewsBlockContainer {
             display: flex;
-            flex-direction: column;
             position: relative;
+            flex-direction: column;
+            transition: all 0.2s linear;
+            background-color: #a86712;
             min-width: 200px;
             max-width: 300px;
             min-height: 300px;
             max-height: 600px;
-            background-color: #a86712;
-            transition: all 0.2s linear;
 
             &:hover {
                 filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.2));
@@ -1391,41 +1397,41 @@ h2 {
             }
             & .architechImg {
                 position: absolute;
+                top: 0;
                 aspect-ratio: 1;
                 width: 100%;
                 height: 60%;
-                top: 0;
 
                 & .architechInnerContainer {
-                    position: relative;
                     display: flex;
+                    position: relative;
+                    transition: all 0.3s linear;
                     width: 100%;
                     height: 100%;
-                    transition: all 0.3s linear;
 
                     &:hover::after {
+                        display: flex;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translate(-50%, -50%);
+                        opacity: 1;
+                        z-index: 2;
+                        background: #0000006c;
+                        width: 100%;
+                        height: 100%;
                         content: url(svgs/view\ icon.svg);
 
                         color: white;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 1;
-                        z-index: 2;
-                        left: 50%;
-                        top: 50%;
-                        background: #0000006c;
-                        transform: translate(-50%, -50%);
                     }
                 }
 
                 & img {
                     position: relative;
-                    width: 100%;
                     aspect-ratio: 1;
+                    width: 100%;
                     height: auto;
                     object-fit: cover;
                     object-position: center;
@@ -1434,29 +1440,29 @@ h2 {
 
             & .architechText {
                 position: absolute;
-                width: 100%;
-                height: 40%;
                 bottom: 0;
                 background-color: #a05a15;
+                width: 100%;
+                height: 40%;
                 color: white;
 
                 & .architechAllText {
                     display: flex;
                     position: relative;
                     flex-direction: column;
-                    height: 100%;
                     padding: 0 1rem;
+                    height: 100%;
                     overflow: hidden;
                     /* background-color: #1b4b17; */
                 }
 
                 & .blogTitle {
-                    margin: 0;
                     display: flexbox;
-                    height: inherit;
-                    margin-top: 20%;
                     align-items: center;
                     transition: all 0.3s ease;
+                    margin: 0;
+                    margin-top: 20%;
+                    height: inherit;
                 }
 
                 & .blogSubTitle {
@@ -1465,12 +1471,12 @@ h2 {
                 }
 
                 & .blogSubTitle p {
-                    margin-block-start: 0;
-                    font-size: 1rem;
-                    display: -webkit-box;
                     -webkit-box-orient: block-axis;
+                    display: -webkit-box;
+                    margin-block-start: 0;
                     -webkit-line-clamp: 2;
                     overflow: hidden;
+                    font-size: 1rem;
                 }
 
                 & .architechAllText .blogSubTitle {
@@ -1483,27 +1489,27 @@ h2 {
     }
     /* SEE MORE BUTTON */
     & .seeMoreBtn {
-        position: relative;
-        width: 100%;
         display: flex;
+        position: relative;
         justify-content: center;
         padding: 1rem 0;
+        width: 100%;
 
         & button {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: transparent;
+            border-radius: 10px;
+            background-color: #b26418;
+            padding: 0.5rem;
             min-width: 8rem;
             max-width: 10rem;
-            font-size: large;
-            padding: 0.5rem;
-            border-radius: 10px;
-            border: transparent;
-            background-color: #b26418;
             color: white;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            font-size: large;
 
             &:hover {
-                background-color: #a05a15;
                 transition: all 0.2s ease;
+                background-color: #a05a15;
             }
         }
     }
@@ -1518,30 +1524,30 @@ h2 {
 
 .envelop {
     position: relative;
+    margin: 0 auto;
     min-width: auto;
     max-width: 700px;
     height: 70vh;
-    margin: 0 auto;
     overflow: hidden;
 
     .inner-envelop {
-        position: relative;
-        height: inherit;
         display: flex;
+        position: relative;
         justify-content: center;
+        height: inherit;
     }
 
     & .inner-envelop .back-envelop {
         position: absolute;
-        width: 700px;
-        height: 500px;
-        background-color: #1d3f4c;
-        left: 50%;
         bottom: 0;
+        left: 50%;
         /*Bottom SET*/
         transform: translateX(-50%);
-        border-radius: 50px 50px 0 0;
         z-index: -1;
+        border-radius: 50px 50px 0 0;
+        background-color: #1d3f4c;
+        width: 700px;
+        height: 500px;
     }
 
     & .inner-envelop form p {
@@ -1551,62 +1557,62 @@ h2 {
     }
 
     & .inner-envelop form {
-        position: absolute;
         display: flex;
+        position: absolute;
+        bottom: 100px;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        background-color: #d9d9d9;
-        width: 80%;
         gap: 0.7rem;
-        padding: 20px;
         border-radius: 25px 25px 0 0;
-        bottom: 100px;
+        background-color: #d9d9d9;
+        padding: 20px;
+        width: 80%;
     }
 
     #allInputs {
         display: flex;
-        gap: 1rem;
         flex-direction: column;
+        gap: 1rem;
     }
 
     #allInputs textarea {
         width: 100%;
-        resize: vertical;
         min-height: 4rem;
         max-height: 12rem;
+        resize: vertical;
     }
 
     #allInputs input[type="text"],
     #allInputs input[type="email"],
     #allInputs textarea {
-        width: 95%;
-        padding: 10px;
-        border-radius: 5px;
+        outline: none;
+        box-shadow: 1px 1px 2px #1d3f4c75;
         border: transparent;
         border-style: none;
-        outline: none;
-        font-family: "k2d";
-        box-shadow: 1px 1px 2px #1d3f4c75;
+        border-radius: 5px;
+        padding: 10px;
+        width: 95%;
         font-size: 1rem;
+        font-family: "k2d";
     }
 
     .inner-envelop form input[type="submit"] {
-        width: 50%;
-        padding: 10px;
-        border-radius: 5px;
-        border: transparent;
-        border-style: none;
+        cursor: pointer;
         outline: none;
         box-shadow: 2px 3px 4px #1d3f4c75;
-        cursor: pointer;
+        border: transparent;
+        border-style: none;
+        border-radius: 5px;
+        padding: 10px;
+        width: 50%;
         font-size: 1.2rem;
     }
 
     .inner-envelop form input[type="submit"]:hover {
+        transition: all 0.3s ease;
         background-color: #224958;
         color: white;
-        transition: all 0.3s ease;
     }
 
     #allInputs > input::placeholder,
@@ -1616,8 +1622,8 @@ h2 {
     }
 
     #allInputs > input:focus {
-        border-bottom: 2px solid #0098a3b4;
         transition: all 0.2s ease-in-out;
+        border-bottom: 2px solid #0098a3b4;
     }
 
     & .inner-envelop .top-envelop {
@@ -1627,33 +1633,33 @@ h2 {
     }
 
     & .inner-envelop .top-envelop .top-main-envelop {
+        -webkit-clip-path: circle(60% at 50% 10%);
         position: absolute;
+        bottom: 0;
+        clip-path: polygon(50% 60%, 100% 38%, 100% 100%, 0 100%, 0 38%);
         background-color: #224958;
         width: 700px;
         height: 600px;
-        bottom: 0;
-        -webkit-clip-path: circle(60% at 50% 10%);
-        clip-path: polygon(50% 60%, 100% 38%, 100% 100%, 0 100%, 0 38%);
     }
 
     & .inner-envelop .top-envelop button {
+        display: flex;
         position: absolute;
         bottom: 20px;
         left: 50%;
-        width: 15rem;
-        height: 2.5rem;
+        align-items: center;
+        gap: 0.5rem;
         transform: translate(-50%);
-        padding: 0 10px;
-        border-radius: 5px;
-        border: transparent;
-        border-style: none;
+        cursor: pointer;
         outline: none;
         box-shadow: 10px 5px 14px #13303bb0;
+        border: transparent;
+        border-style: none;
+        border-radius: 5px;
+        padding: 0 10px;
+        width: 15rem;
+        height: 2.5rem;
         font-size: 20px;
-        cursor: pointer;
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
     }
 
     & .inner-envelop .top-envelop span {
@@ -1663,10 +1669,10 @@ h2 {
 
     & .inner-envelop .top-envelop button:hover,
     .top-envelop button:visited {
+        transition: all 0.3s ease;
+        box-shadow: 0 0px 15px #ffffffb0;
         background-color: #2b596b;
         color: white;
-        box-shadow: 0 0px 15px #ffffffb0;
-        transition: all 0.3s ease;
     }
 }
 
@@ -1696,8 +1702,8 @@ h2 {
     }
 
     .envelop form {
-        width: 80% !important;
         border-radius: 20px !important;
+        width: 80% !important;
     }
 
     .envelop .inner-envelop form {
@@ -1712,21 +1718,21 @@ h2 {
             SUBSCRIBE US START
 ----------------------------------------*/
 .subscribeUs {
+    margin: 4rem 0;
     width: 100%;
     height: auto;
-    margin: 4rem 0;
 
     & .subscribeUsInner {
-        width: inherit;
-        height: inherit;
-        background-color: #1d3f4d;
-        color: white;
-        position: relative;
         display: flex;
+        position: relative;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
+        background-color: #1d3f4d;
         padding: 1rem 0;
+        width: inherit;
+        height: inherit;
+        color: white;
 
         & .arrowText {
             display: flex;
@@ -1755,32 +1761,32 @@ h2 {
 
         & .emailDiv {
             display: flex;
+            flex: 30% 0;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
-            flex-direction: row;
             gap: 2rem;
-            padding: 1.5rem 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 1px 3px 4px 3px #00000025;
             border-radius: 10px;
             background-color: #2a5363;
-            box-shadow: 1px 3px 4px 3px #00000025;
-            flex: 30% 0;
-            transition: all 0.3s ease;
+            padding: 1.5rem 1rem;
 
             & .emailBox {
-                width: 100%;
                 display: flex;
-                gap: 1rem;
                 flex-direction: row;
                 flex-wrap: wrap;
+                gap: 1rem;
+                width: 100%;
 
                 & input {
                     flex: 1 1 0;
-                    padding: 0.8rem;
-                    border-radius: 5rem;
                     outline: none;
                     border: none;
-                    width: 100%;
+                    border-radius: 5rem;
                     background-color: #41849e;
+                    padding: 0.8rem;
+                    width: 100%;
 
                     &::placeholder {
                         color: #e1e1e1;
@@ -1790,26 +1796,26 @@ h2 {
             }
 
             & .emailButton input {
-                padding: 0.8rem;
-                border-radius: 5rem;
+                flex: 1 1 0;
+                transition: all 0.1s ease;
+                cursor: pointer;
                 outline: none;
                 border: none;
+                border-radius: 5rem;
                 background-color: #41849e;
+                padding: 0.8rem;
                 color: white;
-                flex: 1 1 0;
-                cursor: pointer;
-                transition: all 0.1s ease;
 
                 &:hover {
-                    background-color: #377188;
                     transition: all 0.1s ease;
+                    background-color: #377188;
                 }
 
                 &:active {
-                    color: #a6ff00;
-                    background-color: #1d4d45;
-                    border: 1px solid gray;
                     transition: all 0.3s ease;
+                    border: 1px solid gray;
+                    background-color: #1d4d45;
+                    color: #a6ff00;
                 }
             }
         }
@@ -1818,16 +1824,16 @@ h2 {
 // @MEDIA (SUBSCRIBE US)
 @media screen and (max-width: 1080px) {
     .subscribeUs .subscribeUsInner .emailDiv {
-        gap: 1rem;
         flex: 50% 0 0;
+        gap: 1rem;
         transition: all 0.3s ease;
     }
 }
 
 @media screen and (max-width: 720px) {
     .subscribeUs .subscribeUsInner .emailDiv {
-        gap: 1rem;
         flex: 80% 0 0;
+        gap: 1rem;
         transition: all 0.3s ease;
     }
 }
@@ -1841,23 +1847,23 @@ h2 {
             PROJECTS FOOTER START
 ----------------------------------------*/
 .footer {
+    background-color: #11252c;
     width: 100%;
     color: white;
-    background-color: #11252c;
 
     & .ColAlignLeft {
         display: flex;
-        justify-content: flex-start !important;
         flex-direction: column !important;
+        justify-content: flex-start !important;
     }
 
     & .row {
         display: flex;
         flex-direction: row;
-        width: inherit;
-        padding: 1rem;
         justify-content: space-around;
         border-bottom: 1px solid #cccccc4b;
+        padding: 1rem;
+        width: inherit;
 
         & .col {
             display: flex;
@@ -1866,8 +1872,8 @@ h2 {
             gap: 0.5rem;
 
             & p {
-                font-weight: 600;
                 color: white;
+                font-weight: 600;
                 text-transform: uppercase;
             }
         }
