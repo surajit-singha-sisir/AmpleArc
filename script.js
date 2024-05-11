@@ -170,22 +170,22 @@ function open() {
   );
   console.log(sendButton);
 
-  sendButton.onclick = function () {
-    const formInputs = document.querySelectorAll("#allInputs > *");
+  // sendButton.onclick = function () {
+  //   const formInputs = document.querySelectorAll("#allInputs > *");
 
-    sendButton.value = "MAIL SENT";
-    print(sendButton);
+  //   sendButton.value = "MAIL SENT";
+  //   print(sendButton);
 
-    if (
-      formInputs[0].value.trim() == "" ||
-      formInputs[1].value.trim() == "" ||
-      formInputs[2].value.trim() == ""
-    ) {
-      envelopForm.style.opacity = "1";
-    } else {
-      envelopForm.style.opacity = "0";
-    }
-  };
+  //   if (
+  //     formInputs[0].value.trim() == "" ||
+  //     formInputs[1].value.trim() == "" ||
+  //     formInputs[2].value.trim() == ""
+  //   ) {
+  //     envelopForm.style.opacity = "1";
+  //   } else {
+  //     envelopForm.style.opacity = "0";
+  //   }
+  // };
 
   function startAnimation(x) {
     let i = 0;

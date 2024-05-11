@@ -1040,7 +1040,7 @@ h2 {
     bottom: -0.5rem;
     left: 0;
     border-radius: 1rem;
-    background-color: #00cf34;
+    background-color: #f1df34;
   }
   .teamContainer .center {
     height: 100%;
@@ -1100,9 +1100,17 @@ h2 {
   position: relative;
   width: 60%;
   height: 400px;
-  background-color: #084377;
+  background-color: #1b3842;
+  border-radius: 2rem;
+  box-shadow: 1px 1px 2px -1px #fff;
   margin: 0 auto;
   color: white;
+  transition: all 0.3s ease;
+}
+.testimonial_body:hover {
+  transition: all 0.3s ease;
+  box-shadow: 1px 1px 1px 1px rgba(143, 143, 143, 0.5607843137);
+  background-color: #132830;
 }
 .testimonial_body .circle_profile {
   aspect-ratio: 1;
@@ -1184,12 +1192,12 @@ h2 {
   width: 100%;
   display: flex;
   background-color: aqua;
-  animation: lefttoright 10s linear;
+  animation: left2right 10s linear;
   margin: 0 auto;
   border-radius: 5px;
 }
 
-@keyframes lefttoright {
+@keyframes left2right {
   0% {
     margin-left: -100%;
   }
