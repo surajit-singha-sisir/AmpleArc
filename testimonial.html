@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+    <style>
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .testimonial_body {
+            position: relative;
+            width: 60%;
+            height: 400px;
+            background-color: #084377;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .circle_profile {
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            margin: auto;
+
+        }
+
+        .circle_profile img {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .quote {
+            position: relative;
+            height: 40px;
+            gap: 80%;
+            width: 100%;
+        }
+
+        .quote1 {
+            padding-left: 1rem;
+        }
+
+        .quote2 {
+            display: flex;
+            padding-right: 1rem;
+            justify-content: flex-end;
+            float: right;
+        }
+
+        .quote img {
+            width: auto;
+            height: inherit;
+
+        }
+
+        .testimonial_text {
+            position: relative;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .progressBar {
+            height: 5px;
+            margin: 50px auto;
+            overflow: hidden;
+            width: 30%;
+            background-color: green;
+            border-radius: 5px;
+        }
+
+        .progressBar div:first-child {
+            height: inherit;
+            width: 100%;
+            display: flex;
+            background-color: aqua;
+            animation: lefttoright 10s linear;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+
+        @keyframes lefttoright {
+            0% {
+                margin-left: -100%;
+            }
+
+            50% {
+                margin-left: 0%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testimonial_body">
+
+        <!-- TESTIMONIAL SECTION -->
+        <div class="testimonial">
+            <div class="circle_profile">
+                <img src="putung.png" alt="profile picture of putung">
+            </div>
+            <div class="quote quote1">
+                <img src="quote2.svg" alt="first quote">
+            </div>
+            <div class="testimonial_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas eum, dolore mollitia, laudantium
+                iure
+                atque reprehenderit numquam, impedit blanditiis consequuntur sed officiis! Ex at praesentium nulla unde.
+                Fugiat, quas?
+            </div>
+            <div class="quote quote2">
+                <img src="quote1.svg" alt="second quote">
+            </div>
+            <div class="progressBar">
+                <div></div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIAL SECTION -->
+        <div class="testimonial">
+            <div class="circle_profile">
+                <img src="puspa 2.png" alt="profile picture of putung">
+            </div>
+            <div class="quote quote1">
+                <img src="quote2.svg" alt="first quote">
+            </div>
+            <div class="testimonial_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas eum, dolore mollitia, laudantium
+                iure
+                atque reprehenderit numquam, impedit blanditiis consequuntur sed officiis! Ex at praesentium nulla unde.
+                Fugiat, quas?
+            </div>
+            <div class="quote quote2">
+                <img src="quote1.svg" alt="second quote">
+            </div>
+            <div class="progressBar">
+                <div></div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIAL SECTION -->
+        <div class="testimonial">
+            <div class="circle_profile">
+                <img src="putung.png" alt="profile picture of putung">
+            </div>
+            <div class="quote quote1">
+                <img src="quote2.svg" alt="first quote">
+            </div>
+            <div class="testimonial_text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse voluptas eum, dolore mollitia, laudantium
+                iure
+                atque reprehenderit numquam, impedit blanditiis consequuntur sed officiis! Ex at praesentium nulla unde.
+                Fugiat, quas?
+            </div>
+            <div class="quote quote2">
+                <img src="quote1.svg" alt="second quote">
+            </div>
+            <div class="progressBar">
+                <div></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<script>
+    print = console.log;
+    function testimonial() {
+        const testimonials = document.querySelectorAll('.testimonial');
+        let currentIndex = 0;
+
+
+        function eachTestimonial() {
+            testimonials.forEach(x => {
+                x.style.display = "none";
+            });
+            testimonials[currentIndex].style.display = 'block';
+            currentIndex = (currentIndex + 1) % testimonials.length;
+
+        }
+        eachTestimonial();
+
+        function interval() {
+           intervalFunction = setInterval(eachTestimonial, 5000);
+        }
+        
+        interval();
+
+        testimonials.forEach(function (x) {
+            x.onmouseenter = function () {
+                clearInterval(intervalFunction);
+            }
+            x.onmouseleave = function () {
+                interval();
+            }
+        })
+
+    }
+
+    // Call the testimonial function
+    testimonial();
+
+</script>
+
+</html>
